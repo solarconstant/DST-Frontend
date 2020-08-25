@@ -1,0 +1,246 @@
+body {
+  background-color: #00334e;
+}
+
+.logos {
+  background-color: azure;
+  top: 0;
+  height: 20vh;
+  padding: 2% 5%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.logos .logo {
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+}
+.logos .logo:first-child {
+  float: left;
+}
+.logos .logo:last-child {
+  float: right;
+}
+
+.page {
+  width: 80%;
+  height: 100vh;
+  margin-top: 2%;
+  margin: 2% auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.navbar ul {
+  background-color: #145374;
+  width: 100%;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 2%;
+  font-size: large;
+}
+.navbar ul li a {
+  color: azure;
+  text-decoration: none;
+}
+.navbar ul li a:hover {
+  animation: transform-anim 0.5s;
+}
+.navbar ul li .dropdown-menu {
+  background-color: #145374;
+}
+.navbar ul li .dropdown-menu .dropdown-item {
+  color: azure;
+}
+.navbar ul li .dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  animation: transform-anim 0.5s;
+}
+.navbar ul li .navright {
+  margin-right: 0;
+}
+
+.card {
+  background-color: azure;
+}
+.card .card-body ul {
+  width: 100%;
+  text-align: center;
+}
+.card .card-body ul li {
+  text-align: left;
+  width: 45%;
+  display: inline-block;
+}
+.card .card-body ul li label {
+  font-size: large;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card .card-body ul li input {
+  display: block;
+  width: 90%;
+  height: 2rem;
+  border-style: solid;
+  border-width: 1.5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card .card-body ul li select {
+  width: 90%;
+  display: block;
+  height: 2rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 1.5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card .card-footer {
+  text-align: center;
+}
+.card .card-footer button {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 25%;
+}
+.card .card-footer button:hover {
+  animation: button-transform-anim 0.5s;
+}
+
+.listacad {
+  background-color: #145374;
+  text-align: center;
+}
+.listacad h1 {
+  color: white;
+  padding: 2%;
+}
+.listacad #number {
+  color: white;
+}
+.listacad li {
+  margin-top: 3%;
+  list-style-type: none;
+}
+.listacad li .card {
+  transition-property: "background";
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+.listacad li .card .card-body {
+  text-align: left;
+}
+.listacad li .card .col-md-2 button {
+  visibility: hidden;
+}
+.listacad li .card:hover {
+  background-color: #ee6f57;
+}
+.listacad li .card:hover .col-md-2 button {
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  transition-property: "background";
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+.listacad li .card:hover .col-md-2 button:hover {
+  background-color: azure;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: azure;
+}
+footer a {
+  color: azure;
+  text-decoration: none;
+  display: inline;
+  padding: 10%;
+}
+footer a:hover {
+  animation: transform-anim 0.5s;
+  text-decoration: none;
+}
+
+@keyframes transform-anim {
+  to {
+    color: #ee6f57;
+  }
+}
+@keyframes button-transform-anim {
+  to {
+    background-color: #ee6f57;
+    color: azure;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .page {
+    width: 100%;
+    margin: 0;
+  }
+  .page .logos {
+    height: 10vh;
+    border-radius: 0;
+  }
+  .page .logos img {
+    width: 30%;
+  }
+  .page .navbar .navbar-toggler {
+    color: azure;
+    text-align: center;
+  }
+  .page .navbar .collapse ul {
+    width: 100%;
+  }
+  .page .navbar .collapse ul li {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+  }
+  .page .card .card-header {
+    text-align: center;
+  }
+  .page .card .card-body ul {
+    width: 100%;
+  }
+  .page .card .card-body ul li {
+    width: 100%;
+    display: block;
+  }
+  .page .card .card-body ul li label {
+    font-size: small;
+  }
+  .page .card .card-body .card-footer button {
+    width: 70%;
+  }
+  .page .listacad ul .row {
+    width: 100%;
+  }
+  .page .listacad ul .row .card .col-md-4 {
+    height: fit-content;
+  }
+  .page .listacad ul .row .card .col-md-4 .card-img {
+    height: 30vh;
+  }
+  .page .listacad ul .row li {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
